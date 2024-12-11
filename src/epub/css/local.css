@@ -3,6 +3,25 @@
 
 header{
 	font-variant: small-caps;
-	margin: 1em;
-	text-align: center;
+	margin: 3em 0;
+}
+
+/* simulate h4 in an header */
+header > p{
+	font-size: 1em;
+	text-indent: 0;
+}
+
+/* simulate h5 in an header */
+header > p + p{
+	font-size: .83em;
+}
+
+header > *{
+	font-weight: normal;
+	margin: 0;
+}
+
+header > *:first-child{
+	font-weight: bold;
 }
