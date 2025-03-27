@@ -1,27 +1,35 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
 
-header{
-	font-variant: small-caps;
-	margin: 3em 0;
-}
-
-/* simulate h4 in an header */
-header > p{
+header > p:first-child{
+	break-after: avoid;
+	break-inside: avoid;
 	font-size: 1em;
+	font-variant: small-caps;
+	font-weight: bold;
+	hyphens: none;
+	-epub-hyphens: none;
+	margin: 3em 0;
+	text-align: center;
 	text-indent: 0;
 }
 
-/* simulate h5 in an header */
-header > p + p{
-	font-size: .83em;
+/* bridgheads */
+[epub|type~="bridgehead"]{
+	display: inline-block;
+	font-style: italic;
+	max-width: 60%;
+	text-align: justify;
+	text-indent: 0;
 }
 
-header > *{
-	font-weight: normal;
-	margin: 0;
+[epub|type~="bridgehead"] i{
+	font-style: normal;
 }
 
-header > *:first-child{
-	font-weight: bold;
+[epub|type~="z3998:hymn"] [epub|type~="bridgehead"],
+[epub|type~="z3998:poem"] [epub|type~="bridgehead"],
+[epub|type~="z3998:song"] [epub|type~="bridgehead"],
+[epub|type~="z3998:verse"] [epub|type~="bridgehead"]{
+	text-align: justify;
 }
