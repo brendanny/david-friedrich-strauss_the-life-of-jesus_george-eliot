@@ -1,16 +1,19 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
 
-header > p:first-child{
+header{
 	break-after: avoid;
 	break-inside: avoid;
+	hyphens: none;
+	-epub-hyphens: none;
+	text-align: center;
+}
+
+header > p:first-child{
 	font-size: 1em;
 	font-variant: small-caps;
 	font-weight: bold;
-	hyphens: none;
-	-epub-hyphens: none;
 	margin: 3em 0;
-	text-align: center;
 	text-indent: 0;
 }
 
